@@ -30,7 +30,7 @@ To set up this project locally, follow these steps:
 ### `POST /predict`
 Get 10 data points for a given exchange.
 
-**Request Body:**
+
 ```json
 {
     "exchange_name": "your_exchange_type",
@@ -43,7 +43,7 @@ Get 10 data points for a given exchange.
 
 
 Predicts stock prices for a given exchange.
-**Request Body:**
+
 ```json
 {
     "stock_id": "stock id name",
