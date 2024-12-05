@@ -31,10 +31,10 @@ To set up this project locally, follow these steps:
    ```
 
 ## Usage
-1. Place your stock data CSV files in the `stock_price_data_files` directory.
+1. Place your stock data CSV files in the `sample_data` directory.
 2. Run the Flask application:
    ```bash
-   python app.py
+   python predict-stock-value.py
    ```
 3. Use the API to make predictions.
 
@@ -45,8 +45,8 @@ Predicts stock prices for a given exchange.
 **Request Body:**
 ```json
 {
-    "exchange": "your_exchange_type",
-    "num_securities": 3
+    "exchange_name": "your_exchange_type",
+    "file_name": filename.csv
 }
 ```
 
