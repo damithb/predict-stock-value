@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Installation](#installation)
+- [Usage](#Usage)
 - [API Endpoints](#api-endpoints)
 
 ## Installation
