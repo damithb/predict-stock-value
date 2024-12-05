@@ -27,7 +27,7 @@ To set up this project locally, follow these steps:
 3. Use the API to make predictions.
 
 ## API Endpoints
-### `POST /predict`
+### `predict`
 Get 10 data points for a given exchange.
 
 
