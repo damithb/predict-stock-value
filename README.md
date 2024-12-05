@@ -50,8 +50,8 @@ Predicts stock prices for a given exchange.
 }
 ```
 
-- `exchange`: The directory containing stock data CSV files.
-- `num_securities`: The number of files.
+- `exchange_name`: The directory containing stock data CSV files.
+- `file_name`: The number of files.
 
 **Example Request:**
 ```bash
