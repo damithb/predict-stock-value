@@ -51,8 +51,18 @@ Predicts stock prices for a given exchange.
 }
 ```
 
-- `exchange_name`: name of the exchange folder name.
-- `file_name`: file name.
+process file for a given exchange.
+
+```json
+{
+    "stock_id": "stock id name",
+    "data_points":  insert above 10 data points
+
+    "predicted_data_points":  insert predicted data points
+}
+```
+
+
 
 
 
