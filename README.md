@@ -41,5 +41,17 @@ Predicts stock prices for a given exchange.
 - `exchange_name`: name of the exchange folder name.
 - `file_name`: file name.
 
+**Request Body:**
+```json
+{
+    "exchange_name": "your_exchange_type",
+    "file_name": filename.csv
+}
+```
+
+- `exchange_name`: name of the exchange folder name.
+- `file_name`: file name.
+
+
 
 
