@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "1c52c9ba-afc9-4713-8184-c7b22b58f316",
+		"name": "damith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "480570",
+		"_collection_link": "https://speeding-satellite-592142.postman.co/workspace/Team-Workspace~8b9b3e3f-27d1-4669-80fb-3660ff71a3ff/collection/480570-1c52c9ba-afc9-4713-8184-c7b22b58f316?action=share&source=collection_link&creator=480570"
+	},
+	"item": [
+		{
+			"name": "get_10_datapoints",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"random_list\",pm.response.json());",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"exchange_name\": \"LSE\",\n  \"file_name\": \"FLTR.csv\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_data_points/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_data_points",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict_stock_prices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"stock_id\": \"FLTR\",\n  \"data_points\": [\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"15-11-2023\",\n        \"stock_price\": 17542.7\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"16-11-2023\",\n        \"stock_price\": 17718.12\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"17-11-2023\",\n        \"stock_price\": 17930.74\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"18-11-2023\",\n        \"stock_price\": 17948.67\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"19-11-2023\",\n        \"stock_price\": 17984.57\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"20-11-2023\",\n        \"stock_price\": 17858.68\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"21-11-2023\",\n        \"stock_price\": 18090.84\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"22-11-2023\",\n        \"stock_price\": 18018.48\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"23-11-2023\",\n        \"stock_price\": 18216.68\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"24-11-2023\",\n        \"stock_price\": 18271.33\n    }\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/predict_stock_prices/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict_stock_prices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process_files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"exchange_name\" : \"\",\n    \"data_points\" : [\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"15-11-2023\",\n        \"stock_price\": 17542.7\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"16-11-2023\",\n        \"stock_price\": 17718.12\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"17-11-2023\",\n        \"stock_price\": 17930.74\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"18-11-2023\",\n        \"stock_price\": 17948.67\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"19-11-2023\",\n        \"stock_price\": 17984.57\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"20-11-2023\",\n        \"stock_price\": 17858.68\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"21-11-2023\",\n        \"stock_price\": 18090.84\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"22-11-2023\",\n        \"stock_price\": 18018.48\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"23-11-2023\",\n        \"stock_price\": 18216.68\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"24-11-2023\",\n        \"stock_price\": 18271.33\n    }\n],\n    \"predicted_data_points\" : [\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"25-11-2023\",\n        \"stock_price\": 18216.68\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"26-11-2023\",\n        \"stock_price\": 18244.005\n    },\n    {\n        \"stock_id\": \"FLTR\",\n        \"timestamp\": \"27-11-2023\",\n        \"stock_price\": 18237.17375\n    }\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/process_file/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"process_file",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
