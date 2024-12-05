@@ -22,19 +22,12 @@ To set up this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Jock00/stock_predict.git
-   cd stock-price-predictor
+   git clone https://github.com/damithb/predict-stock-value/
+   cd predict-stock-value
    ```
-
-2. Create a virtual environment (optional but recommended):
+2. Install the required packages:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
-
-3. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 ## Usage
