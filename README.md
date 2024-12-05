@@ -28,7 +28,7 @@ To set up this project locally, follow these steps:
 
 ## API Endpoints
 ### `POST /predict`
-Predicts stock prices for a given exchange.
+Get 10 data points for a given exchange.
 
 **Request Body:**
 ```json
@@ -41,11 +41,13 @@ Predicts stock prices for a given exchange.
 - `exchange_name`: name of the exchange folder name.
 - `file_name`: file name.
 
+
+Predicts stock prices for a given exchange.
 **Request Body:**
 ```json
 {
-    "exchange_name": "your_exchange_type",
-    "file_name": filename.csv
+    "stock_id": "stock id name",
+    "data_points":  insert above 10 data points
 }
 ```
 
